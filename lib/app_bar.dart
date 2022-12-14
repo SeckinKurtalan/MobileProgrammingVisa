@@ -17,7 +17,7 @@ class _TopAppBarState extends State<TopAppBar> {
     var ResponsiveWidth = MediaQuery.of(context).size.width;
     var ResponsiveHeight = MediaQuery.of(context).size.height;
     return Container(
-      height: widget.PageName == 'Favorites'
+      height: widget.PageName.contains("Favorites")
           ? ResponsiveHeight * 0.22
           : ResponsiveHeight * 0.28,
       width: ResponsiveWidth,
@@ -30,12 +30,12 @@ class _TopAppBarState extends State<TopAppBar> {
             bottom: ResponsiveHeight * 0.01),
         child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Text(widget.PageName,
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 30,
                 fontWeight: FontWeight.bold,
               )),
           const Spacer(),
-          widget.PageName == 'Favorites'
+          widget.PageName.contains("Favorites")
               ? const SizedBox.shrink()
               : Container(
                   decoration: BoxDecoration(

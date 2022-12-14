@@ -28,10 +28,21 @@ class LoadData {
   }
 }
 
-InkWell create_container(String imgPath, String gameName, String metacritic,
-    String genre, double screenHeight, double screenWidth,BuildContext context) {
-    return InkWell(onTap: () {Navigator.of(context).push(MaterialPageRoute(
-      builder: (context) => DetailPage(value: UserClick(gameName,imgPath),)));},
+InkWell create_container(
+    String imgPath,
+    String gameName,
+    String metacritic,
+    String genre,
+    double screenHeight,
+    double screenWidth,
+    BuildContext context) {
+  return InkWell(
+    onTap: () {
+      Navigator.of(context).push(MaterialPageRoute(
+          builder: (context) => DetailPage(
+                value: UserClick(gameName, imgPath),
+              )));
+    },
     child: Container(
       margin: EdgeInsets.only(top: 5, bottom: 5),
       color: Color.fromARGB(255, 241, 241, 241),
@@ -69,7 +80,8 @@ InkWell create_container(String imgPath, String gameName, String metacritic,
                     alignment: Alignment.center,
                     child: Text(
                       "metacritic:",
-                      style: TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
+                      style:
+                          TextStyle(fontSize: 16, fontWeight: FontWeight.w700),
                     ),
                   )),
               Container(
