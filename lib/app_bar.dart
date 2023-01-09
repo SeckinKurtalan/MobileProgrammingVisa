@@ -5,8 +5,10 @@ import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
 
 class TopAppBar extends StatefulWidget {
-  const TopAppBar({super.key, required this.PageName});
+  const TopAppBar(
+      {super.key, required this.PageName, required this.textEditingController});
   final String PageName;
+  final TextEditingController textEditingController;
   @override
   State<TopAppBar> createState() => _TopAppBarState();
 }
@@ -46,24 +48,24 @@ class _TopAppBarState extends State<TopAppBar> {
                     height: ResponsiveHeight * 0.05,
                     width: ResponsiveWidth,
                     child: TextField(
-                        //controller: widget.searchedText,
+                        controller: widget.textEditingController,
                         //textAlignVertical: TextAlignVertical.center,
                         decoration: InputDecoration(
-                      contentPadding: const EdgeInsets.only(
-                          top: 1.69420, bottom: 0, left: 0, right: 0),
-                      hintText: 'Search for the games',
-                      hintStyle:
-                          const TextStyle(fontSize: 18, color: Colors.grey),
-                      border: InputBorder.none,
-                      prefixIcon: const Icon(
-                        Icons.search,
-                        size: 25,
-                        color: Colors.grey,
-                      ),
-                      constraints: BoxConstraints(
-                          maxWidth: ResponsiveWidth * 0.9,
-                          maxHeight: ResponsiveHeight * 0.06),
-                    )),
+                          contentPadding: const EdgeInsets.only(
+                              top: 1.69420, bottom: 0, left: 0, right: 0),
+                          hintText: 'Search for the games',
+                          hintStyle:
+                              const TextStyle(fontSize: 18, color: Colors.grey),
+                          border: InputBorder.none,
+                          prefixIcon: const Icon(
+                            Icons.search,
+                            size: 25,
+                            color: Colors.grey,
+                          ),
+                          constraints: BoxConstraints(
+                              maxWidth: ResponsiveWidth * 0.9,
+                              maxHeight: ResponsiveHeight * 0.06),
+                        )),
                   ),
                 )
         ]),
