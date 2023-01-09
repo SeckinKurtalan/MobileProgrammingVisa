@@ -30,7 +30,6 @@ Future<List<LoadData>> apiCall() async {
     postList.add(LoadData.fromJson(i));
   }
 
-  //print('${postList.length} runpaç');
   return postList;
 }
 
@@ -51,7 +50,7 @@ class MyApp extends StatelessWidget {
               title:
                   "Games", //The app is focused on game news so we set the title "Games".
             ),
-        '/favorites': (context) => FavoritesView(),
+        '/favorites': (context) => const FavoritesView(),
         '/DetailPage': (context) => const DetailPage(
               value: UserClick(" ", " "),
             )
@@ -135,8 +134,6 @@ class _MyHomePageState extends State<MyHomePage> {
                           searchDatas = [];
                           searchDatas = datas;
                         });
-
-                        print('adflkgjaşldfkjgş ${searchDatas.length}');
                       }
                     } else {
                       setState(() {
@@ -150,7 +147,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   //searchDatas = searchDatas.toSet().toList();
 
                   return ListView.builder(
-                    physics: NeverScrollableScrollPhysics(),
+                    physics: const NeverScrollableScrollPhysics(),
                     shrinkWrap: true,
                     itemCount: searchDatas.length,
                     itemBuilder: (context, index) {
@@ -165,7 +162,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     },
                   );
                 } else {
-                  return CircularProgressIndicator();
+                  return const CircularProgressIndicator();
                 }
               },
             ),
@@ -282,10 +279,10 @@ class _DetailPageState extends State<DetailPage> {
         leading: BackButton(
             onPressed: () {
               Navigator.of(context).push(MaterialPageRoute(
-                  builder: (context) => MyHomePage(title: "Games")));
+                  builder: (context) => const MyHomePage(title: "Games")));
             },
             color: Colors.black),
-        title: Text(
+        title: const Text(
           "Games",
           style: TextStyle(fontSize: 25, color: Colors.black),
         ),
@@ -305,10 +302,10 @@ class _DetailPageState extends State<DetailPage> {
                 Align(
                   alignment: Alignment.centerRight,
                   child: Padding(
-                    padding: EdgeInsets.only(bottom: 15, right: 15),
+                    padding: const EdgeInsets.only(bottom: 15, right: 15),
                     child: Text(
                       widget.value.gameName,
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 30,
                         fontWeight: FontWeight.bold,
                         color: Colors.white,
@@ -322,7 +319,7 @@ class _DetailPageState extends State<DetailPage> {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Align(
+                      const Align(
                         alignment: Alignment.centerLeft,
                         child: Padding(
                           padding: EdgeInsets.only(top: 15, left: 15),
@@ -334,7 +331,7 @@ class _DetailPageState extends State<DetailPage> {
                         ),
                       ),
                       Padding(
-                        padding: EdgeInsets.only(top: 15),
+                        padding: const EdgeInsets.only(top: 15),
                         child: Container(
                             width: 50,
                             height: 50,
@@ -352,14 +349,14 @@ class _DetailPageState extends State<DetailPage> {
                   Align(
                     alignment: Alignment.center,
                     child: Padding(
-                      padding: EdgeInsets.only(left: 13),
+                      padding: const EdgeInsets.only(left: 13),
                       child: Text(
                         "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Imperdiet proin fermentum leo vel orci porta non pulvinar. Urna cursus eget nunc scelerisque. Adipiscing at in tellus integer feugiat scelerisque varius morbi. Et odio pellentesque diam volutpat. Eu tincidunt tortor aliquam nulla facilisi cras fermentum odio eu. Luctus accumsan tortor posuere ac ut consequat semper. Massa tincidunt nunc pulvinar sapien et. Duis at tellus at urna condimentum mattis pellentesque id nibh. Arcu odio ut sem nulla pharetra diam sit. Facilisi cras fermentum odio eu feugiat pretium nibh ipsum consequat. Posuere urna nec tincidunt praesent semper feugiat nibh sed pulvinar. Velit laoreet id donec ultrices tincidunt arcu non. Augue lacus viverra vitae congue eu consequat ac felis. Facilisi morbi tempus iaculis urna id volutpat lacus laoreet. Non nisi est sit amet facilisis magna etiam tempor orci. Scelerisque eu ultrices vitae auctor eu augue ut lectus arcu. Ac auctor augue mauris augue neque gravida. Et ultrices neque ornare aenean euismod elementum nisi. Sed enim ut sem viverra aliquet eget sit amet. Cras sed felis eget velit aliquet sagittis. Nisl tincidunt eget nullam non. Tempor orci dapibus ultrices in iaculis nunc sed. Amet nisl purus in mollis nunc sed id semper risus. Scelerisque felis imperdiet proin fermentum leo vel. Elementum integer enim neque volutpat. Sed vulputate odio ut enim blandit volutpat maecenas volutpat blandit. Viverra nam libero justo laoreet. Id porta nibh venenatis cras. Lacinia at quis risus sed. Maecenas volutpat blandit aliquam etiam erat velit scelerisque in dictum. Pharetra sit amet aliquam id diam. Blandit massa enim nec dui nunc mattis enim. Hac habitasse platea dictumst quisque sagittis purus sit. Aenean pharetra magna ac placerat vestibulum lectus mauris ultrices eros. At ultrices mi tempus imperdiet nulla malesuada pellentesque elit. Faucibus nisl tincidunt eget nullam non nisi. Tincidunt eget nullam non nisi est sit amet facilisis. Mattis pellentesque id nibh tortor. Eu sem integer vitae justo eget magna fermentum iaculis. Venenatis tellus in metus vulputate eu scelerisque. Semper eget duis at tellus at. Ullamcorper malesuada proin libero nunc consequat interdum varius. A arcu cursus vitae congue mauris. Tellus in hac habitasse platea. Morbi enim nunc faucibus a pellentesque. Morbi tincidunt ornare massa eget egestas purus viverra. Sem et tortor consequat id porta nibh venenatis cras sed. Ipsum nunc aliquet bibendum enim facilisis. Mauris a diam maecenas sed enim ut sem viverra. Faucibus purus in massa tempor nec. Id interdum velit laoreet id donec ultrices tincidunt arcu. Eu scelerisque felis imperdiet proin fermentum. Pellentesque pulvinar pellentesque habitant morbi tristique senectus. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Enim neque volutpat ac tincidunt. Tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Neque laoreet suspendisse interdum consectetur libero. A diam sollicitudin tempor id eu nisl nunc mi ipsum. Nulla facilisi cras fermentum odio. Congue eu consequat ac felis donec et. Turpis massa sed elementum tempus egestas sed sed risus pretium. Ornare massa eget egestas purus viverra accumsan in nisl. Id faucibus nisl tincidunt eget nullam non. Dui vivamus arcu felis bibendum ut tristique. Tortor consequat id porta nibh. Non blandit massa enim nec dui nunc mattis enim ut. Malesuada fames ac turpis egestas. Cras sed felis eget velit aliquet sagittis id consectetur purus. Habitant morbi tristique senectus et netus et malesuada fames ac. Lorem ipsum dolor sit amet consectetur adipiscing elit pellentesque. Eu mi bibendum neque egestas congue. Nunc scelerisque viverra mauris in. Malesuada bibendum arcu vitae elementum. Sollicitudin ac orci phasellus egestas tellus rutrum tellus. Diam ut venenatis tellus in metus vulputate eu. Mattis pellentesque id nibh tortor id aliquet lectus. Nunc sed blandit libero volutpat sed. Leo a diam sollicitudin tempor. Id eu nisl nunc mi ipsum faucibus vitae aliquet nec. Morbi enim nunc faucibus a pellentesque sit amet porttitor. Aliquet bibendum enim facilisis gravida neque convallis. Enim diam vulputate ut pharetra sit. Commodo viverra maecenas accumsan lacus vel facilisis volutpat est. Imperdiet massa tincidunt nunc pulvinar sapien et ligula. Orci eu lobortis elementum nibh tellus. Integer quis auctor elit sed. Facilisis leo vel fringilla est ullamcorper eget nulla. Sit amet risus nullam eget felis. Eu sem integer vitae justo eget magna.",
                         maxLines: isExpanded ? 99 : 4,
                         overflow: isExpanded ? TextOverflow.ellipsis : null,
                         textAlign: TextAlign.start,
-                        style:
-                            TextStyle(height: 2.2, fontWeight: FontWeight.w500),
+                        style: const TextStyle(
+                            height: 2.2, fontWeight: FontWeight.w500),
                       ),
                     ),
                   ),
@@ -372,7 +369,7 @@ class _DetailPageState extends State<DetailPage> {
                                   isExpanded = !isExpanded;
                                 });
                               },
-                              child: Text('Read Less')))
+                              child: const Text('Read Less')))
                       : Align(
                           alignment: Alignment.centerRight,
                           child: TextButton(
@@ -381,7 +378,7 @@ class _DetailPageState extends State<DetailPage> {
                                   isExpanded = true;
                                 });
                               },
-                              child: Text('Read More'))),
+                              child: const Text('Read More'))),
                 ],
               ),
               InkWell(
@@ -396,11 +393,11 @@ class _DetailPageState extends State<DetailPage> {
                           : '/r/BATTLEFIELD_ONE/'));
                 },
                 child: Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: SizedBox(
                       width: screenWidth,
                       height: screenHeight / 8,
-                      child: Align(
+                      child: const Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Visit Reddit",
@@ -421,11 +418,11 @@ class _DetailPageState extends State<DetailPage> {
                       : "https://www.ea.com/games/battlefield/battlefield-1");
                 },
                 child: Padding(
-                  padding: EdgeInsets.only(left: 15),
+                  padding: const EdgeInsets.only(left: 15),
                   child: SizedBox(
                       width: screenWidth,
                       height: screenHeight / 8,
-                      child: Align(
+                      child: const Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
                           "Visit Website",
